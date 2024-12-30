@@ -1,6 +1,4 @@
-import { registerEndpoint } from '@nuxt/test-utils/runtime'
+import { $fetch } from '@nuxt/test-utils/e2e'
 
-registerEndpoint('/test/', {
-  method: 'POST',
-  handler: () => ({ test: 'test-field' })
-})
+const html = await $fetch('/')
+console.log(html);
