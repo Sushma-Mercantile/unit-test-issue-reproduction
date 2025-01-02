@@ -1,4 +1,13 @@
-import { $fetch } from '@nuxt/test-utils/e2e'
+import { setup, $fetch, createPage, url } from '@nuxt/test-utils/e2e'
+import { describe, test, expect } from 'vitest'
 
-const html = await $fetch('/')
-console.log(html);
+describe('test', async () => {
+    await setup()
+
+    test('contains number as string', async () => {
+        console.log("test");
+        const html = await $fetch('/')
+        console.log(html);
+        // expect(html).toContain('Number:')
+    })
+})
